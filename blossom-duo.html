@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blossom Duo — Nancy Finds | Most Roses Do One Thing.</title>
+<meta name="description" content="Cap on: air pulse suction. Cap off: rhythmic tapping. One rose. Two completely different experiences. Blossom Duo by Nancy Finds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF7F2;
+  --blush:#FFF0F3;
+  --rose:#C9617A;
+  --cta:#D63361;
+  --cta-hover:#B82A52;
+  --dark:#1C1C1C;
+  --mid:#4A4A4A;
+  --light:#7A7A7A;
+  --white:#FFFFFF;
+  --border:#E8DDD8;
+  --check:#2A9B5A;
+  --gold:#C9A84C;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--white);color:var(--dark);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3{font-family:var(--ff-display);line-height:1.12}
+h1{font-size:clamp(28px,5vw,50px);font-weight:700}
+h2{font-size:clamp(22px,3.5vw,38px);font-weight:600}
+h3{font-size:clamp(17px,2.5vw,22px);font-weight:600}
+p{line-height:1.75;color:var(--mid)}
+
+/* ── LAYOUT ── */
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.container-sm{max-width:720px;margin:0 auto;padding:0 24px}
+section{padding:72px 24px}
+
+/* ── EYEBROW ── */
+.eyebrow{display:block;font-family:var(--ff-body);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--rose);margin-bottom:14px}
+
+/* ── DIVIDER ── */
+.rule{width:44px;height:3px;background:var(--rose);border-radius:2px;margin:0 auto 28px}
+.rule.left{margin:0 0 28px}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;font-family:var(--ff-body);font-weight:600;font-size:16px;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;transition:background .2s,transform .1s;letter-spacing:.01em;text-align:center}
+.btn-primary{background:var(--cta);color:#fff}
+.btn-primary:hover{background:var(--cta-hover);transform:translateY(-1px)}
+.btn-lg{font-size:18px;padding:20px 40px}
+.btn-block{display:block;width:100%}
+
+/* ─────────────────────────────
+   ANNOUNCEMENT BAR
+───────────────────────────── */
+.ann-bar{background:var(--dark);color:#fff;text-align:center;padding:10px 20px;font-size:13px;font-weight:500;letter-spacing:.02em}
+.ann-bar span{color:#FFD6E0}
+
+/* ─────────────────────────────
+   STICKY HEADER
+───────────────────────────── */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:13px 24px}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--ff-display);font-size:20px;font-weight:700;color:var(--dark)}
+.logo span{color:var(--rose)}
+.header-btn{font-size:14px;padding:10px 22px}
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+#hero{padding:0;background:var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:92vh;max-width:1200px;margin:0 auto}
+.hero-img-col{overflow:hidden}
+.hero-img-placeholder{width:100%;height:100%;min-height:520px;background:linear-gradient(145deg,#F8E8EE 0%,#EDCCD6 50%,#E0B8C4 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative}
+/* — SWAP THIS DIV FOR A REAL <img> TAG — */
+.img-label{font-size:11px;color:var(--rose);text-transform:uppercase;letter-spacing:.1em;font-weight:600;text-align:center;padding:0 24px;line-height:1.8;background:rgba(255,255,255,.5);border-radius:8px;padding:10px 20px}
+.hero-content{display:flex;flex-direction:column;justify-content:center;padding:60px 56px}
+.hero-h1{margin-bottom:22px}
+.hero-h1 em{color:var(--rose);font-style:italic}
+.hero-sub{font-size:17px;max-width:440px;margin-bottom:32px}
+.price-row{display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.price-now{font-size:30px;font-weight:700;color:var(--dark)}
+.price-was{font-size:18px;color:var(--light);text-decoration:line-through}
+.price-badge{background:var(--blush);color:var(--cta);font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px}
+.cta-group{max-width:380px;display:flex;flex-direction:column;gap:12px}
+.promo-note{font-size:13px;color:var(--mid);text-align:center}
+.promo-note code{background:var(--blush);color:var(--cta);padding:2px 8px;border-radius:4px;font-weight:700}
+.trust-strip{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);font-weight:500}
+.trust-item .ico{font-size:15px}
+.stars{color:var(--gold);letter-spacing:-1px}
+
+/* ─────────────────────────────
+   STOCK BAR
+───────────────────────────── */
+.stock-bar{background:var(--blush);border-top:1px solid #F8D0DC;border-bottom:1px solid #F8D0DC;padding:12px 24px;text-align:center;font-size:14px;font-weight:500;color:var(--cta)}
+.stock-bar strong{font-weight:700}
+
+/* ─────────────────────────────
+   PROBLEM
+───────────────────────────── */
+#problem{background:var(--white);text-align:center}
+#problem h2{margin-bottom:20px}
+#problem p{max-width:600px;margin:0 auto 18px;font-size:17px}
+
+/* ─────────────────────────────
+   MECHANISM
+───────────────────────────── */
+#mechanism{background:var(--cream)}
+.section-header{text-align:center;margin-bottom:52px}
+.section-sub{font-size:17px;color:var(--mid);max-width:560px;margin:16px auto 0}
+.mech-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
+.mech-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.07);border:1px solid var(--border)}
+.mech-img{height:240px;background:linear-gradient(140deg,#F8E8EE 0%,#EDCCD6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
+.mech-img.mode-b{background:linear-gradient(140deg,#EEF0F8 0%,#D8D4E8 100%)}
+.mode-badge{position:absolute;top:14px;left:14px;background:#fff;color:var(--dark);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:5px 12px;border-radius:20px}
+.mech-icon{font-size:40px}
+.mech-body{padding:28px}
+.mech-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--rose);margin-bottom:10px}
+.mech-label.b{color:#7870A8}
+.mech-body h3{margin-bottom:10px}
+.mech-body p{font-size:15px}
+.mech-footer{text-align:center;margin-top:40px;font-family:var(--ff-display);font-size:17px;font-style:italic;color:var(--mid)}
+
+/* ─────────────────────────────
+   SPECS
+───────────────────────────── */
+#specs{background:var(--white);padding:56px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+#specs h2{text-align:center;margin-bottom:48px;font-size:clamp(20px,3vw,30px)}
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:900px;margin:0 auto}
+.spec-item{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.spec-ico{width:54px;height:54px;background:var(--blush);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}
+.spec-item h4{font-family:var(--ff-body);font-size:14px;font-weight:600;color:var(--dark)}
+.spec-item p{font-size:13px;color:var(--light);margin:0}
+
+/* ─────────────────────────────
+   EARLY PROOF
+───────────────────────────── */
+#early-proof{background:var(--cream);text-align:center}
+.feat-review{max-width:680px;margin:0 auto;background:var(--white);border-radius:16px;padding:44px 48px;box-shadow:0 4px 32px rgba(0,0,0,.07);border:1px solid var(--border)}
+.feat-stars{font-size:22px;color:var(--gold);margin-bottom:20px;letter-spacing:2px}
+.feat-review blockquote{font-family:var(--ff-display);font-size:clamp(18px,2.5vw,24px);font-style:italic;line-height:1.5;color:var(--dark);margin-bottom:22px}
+.feat-attrib{font-size:14px;color:var(--light);font-weight:500}
+.review-count{margin-top:28px;font-size:14px;color:var(--mid)}
+.review-count a{color:var(--rose);text-decoration:underline}
+
+/* ─────────────────────────────
+   EDITORIAL
+───────────────────────────── */
+#editorial{background:var(--white)}
+.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1050px;margin:0 auto}
+.edit-img{height:480px;border-radius:16px;background:linear-gradient(160deg,#F5E8EC 0%,#E8D0D8 50%,#DCC8D0 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.pull-quote{font-family:var(--ff-display);font-size:clamp(26px,4vw,42px);font-style:italic;line-height:1.15;color:var(--dark);margin-bottom:28px}
+.pull-quote em{color:var(--rose)}
+.edit-content p{font-size:16px;margin-bottom:18px}
+
+/* ─────────────────────────────
+   COMPARISON
+───────────────────────────── */
+#comparison{background:var(--cream)}
+.table-wrap{max-width:760px;margin:0 auto;overflow-x:auto}
+.comp-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.07)}
+.comp-table th{padding:20px 24px;font-family:var(--ff-body);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--white);border-bottom:2px solid var(--border)}
+.comp-table th:first-child{text-align:left}
+.comp-table th.hi{background:var(--blush);color:var(--cta)}
+.comp-table td{padding:15px 24px;font-size:15px;border-bottom:1px solid var(--border);text-align:center;color:var(--mid)}
+.comp-table td:first-child{text-align:left;font-weight:500;color:var(--dark)}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td.hi{background:#FFF8FA}
+.comp-table th:nth-child(3),.comp-table td:nth-child(3){background:#FFF8FA}
+.comp-table th:nth-child(3){background:var(--blush);color:var(--cta)}
+.ck{color:var(--check);font-size:17px;font-weight:700}
+.cx{color:#C0C0C0;font-size:17px}
+.cs{color:var(--gold);font-size:13px;font-weight:500}
+.comp-foot{text-align:center;margin-top:28px;font-family:var(--ff-display);font-size:16px;font-style:italic;color:var(--mid)}
+
+/* ─────────────────────────────
+   REVIEWS
+───────────────────────────── */
+#reviews{background:var(--white)}
+.agg-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0 6px}
+.agg-stars{font-size:22px;color:var(--gold);letter-spacing:2px}
+.agg-score{font-size:20px;font-weight:700}
+.agg-ct{font-size:14px;color:var(--light)}
+.review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px;margin:0 auto}
+.r-card{background:var(--cream);border-radius:12px;padding:28px;border:1px solid var(--border)}
+.r-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;gap:10px}
+.r-chip{background:var(--white);border:1px solid var(--border);color:var(--rose);font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase}
+.r-stars{color:var(--gold);font-size:13px;letter-spacing:1px;white-space:nowrap}
+.r-card blockquote{font-size:15px;line-height:1.65;color:var(--mid);font-style:italic;margin-bottom:14px}
+.r-author{font-size:13px;color:var(--light);font-weight:500}
+.r-author span{color:var(--check);font-size:11px;margin-left:4px}
+
+/* ─────────────────────────────
+   OFFER
+───────────────────────────── */
+#offer{background:var(--cream)}
+.urgency-bar{background:var(--cta);color:#fff;text-align:center;padding:13px 24px;font-size:14px;font-weight:600;border-radius:10px 10px 0 0;max-width:800px;margin:0 auto}
+.offer-card{max-width:800px;margin:0 auto;background:var(--white);border-radius:0 0 16px 16px;border:1px solid var(--border);border-top:none;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,.1)}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr}
+.offer-img{min-height:420px;background:linear-gradient(140deg,#F8E8EE 0%,#EDCCD6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:40px}
+.offer-body{padding:44px 40px;display:flex;flex-direction:column;gap:20px;justify-content:center}
+.offer-name{font-family:var(--ff-display);font-size:26px;font-weight:600}
+.offer-sub-name{font-size:14px;color:var(--light);margin-top:4px}
+.offer-price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.o-price{font-size:36px;font-weight:700}
+.o-was{font-size:20px;color:var(--light);text-decoration:line-through}
+.o-save{background:var(--blush);color:var(--cta);font-size:13px;font-weight:700;padding:4px 12px;border-radius:20px}
+.promo-box{background:#FFF8FA;border:1px dashed var(--rose);border-radius:8px;padding:13px 16px;font-size:14px;color:var(--mid)}
+.promo-box code{font-weight:700;color:var(--cta);font-size:15px}
+.promo-box small{font-size:12px;color:var(--light);display:block;margin-top:3px}
+.offer-trust{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ot-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mid);font-weight:500}
+.ship-note{font-size:13px;color:var(--light);text-align:center}
+
+/* ─────────────────────────────
+   FAQ
+───────────────────────────── */
+#faq{background:var(--white)}
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;font-family:var(--ff-body);font-size:16px;font-weight:600;color:var(--dark);text-align:left;gap:16px}
+.faq-q:hover{color:var(--rose)}
+.faq-ico{font-size:22px;color:var(--rose);flex-shrink:0;transition:transform .3s;line-height:1;font-weight:300}
+.faq-item.open .faq-ico{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-inner{padding:0 0 22px;font-size:15px;line-height:1.75;color:var(--mid)}
+
+/* ─────────────────────────────
+   FINAL CTA
+───────────────────────────── */
+#final-cta{background:var(--dark);padding:80px 24px;text-align:center;color:#fff}
+#final-cta .eyebrow{color:#F0C0CC}
+#final-cta h2{color:#fff;margin-bottom:16px}
+#final-cta p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 36px}
+.final-trust{display:flex;justify-content:center;align-items:center;gap:24px;margin-top:24px;flex-wrap:wrap}
+.ft-item{font-size:13px;color:rgba(255,255,255,.55);font-weight:500;display:flex;align-items:center;gap:5px}
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
+footer{background:#111;padding:32px 24px;text-align:center}
+.foot-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px}
+.foot-logo{font-family:var(--ff-display);font-size:18px;color:#fff;font-weight:700}
+.foot-logo span{color:var(--rose)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}
+.foot-links a{font-size:13px;color:rgba(255,255,255,.45)}
+.foot-links a:hover{color:#fff}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+/* ─────────────────────────────
+   STICKY MOBILE CTA
+───────────────────────────── */
+#sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#fff;border-top:1px solid var(--border);padding:12px 16px;display:none;box-shadow:0 -4px 24px rgba(0,0,0,.1)}
+.sticky-inner{display:flex;align-items:center;gap:12px;max-width:600px;margin:0 auto}
+.sticky-price{font-weight:700;font-size:16px;white-space:nowrap}
+.sticky-price small{font-size:12px;color:var(--light);text-decoration:line-through;font-weight:400;margin-left:4px}
+#sticky-cta .btn{flex:1;font-size:15px;padding:14px 20px}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-img-placeholder{min-height:340px}
+  .hero-content{padding:40px 24px}
+  .edit-grid{grid-template-columns:1fr;gap:36px}
+  .edit-img{height:280px}
+  .offer-grid{grid-template-columns:1fr}
+  .offer-img{min-height:240px}
+  #sticky-cta{display:flex}
+}
+@media(max-width:640px){
+  section{padding:52px 16px}
+  .mech-grid{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr}
+  .specs-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-review{padding:28px 22px}
+  .offer-body{padding:32px 22px}
+  .hero-h1{font-size:28px}
+  .pull-quote{font-size:28px}
+  .trust-strip{gap:12px}
+}
+@media(max-width:420px){
+  .specs-grid{grid-template-columns:1fr 1fr}
+  .offer-trust{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     ANNOUNCEMENT BAR
+════════════════════════════════════ -->
+<div class="ann-bar">
+  🌸 Free Shipping on All Orders &nbsp;·&nbsp; Use code <span>ROSE15</span> for an extra 15% off — Today Only
+</div>
+
+<!-- ═══════════════════════════════════
+     STICKY HEADER
+════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">Nancy <span>Finds</span></a>
+    <a href="#offer" class="btn btn-primary header-btn">Get Blossom Duo — $44.99</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-grid">
+
+    <!-- IMAGE COLUMN -->
+    <div class="hero-img-col">
+      <div class="hero-img-placeholder">
+        <!--
+          ╔══════════════════════════════════════════╗
+          ║  SWAP THIS DIV FOR:                      ║
+          ║  <img src="hero-product.jpg"             ║
+          ║       alt="Blossom Duo — both pieces"    ║
+          ║       style="width:100%;height:100%;     ║
+          ║              object-fit:cover">          ║
+          ║                                          ║
+          ║  SHOT BRIEF:                             ║
+          ║  · Both pieces visible in one frame      ║
+          ║  · Cap slightly detached / hovering      ║
+          ║  · Warm cream or blush background        ║
+          ║  · Studio lighting, soft shadows         ║
+          ║  · Product fills 60–70% of frame         ║
+          ╚══════════════════════════════════════════╝
+        -->
+        <span style="font-size:48px">🌸</span>
+        <div class="img-label">
+          📸 HERO IMAGE<br>
+          Blossom Duo — both pieces, cap slightly lifted<br>
+          Warm cream background · Studio lighting
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT COLUMN -->
+    <div class="hero-content">
+      <span class="eyebrow">Nancy Finds · Rose Collection</span>
+      <h1 class="hero-h1">
+        Most Roses<br>Do One Thing.<br><em>Blossom Duo</em><br>Does Both.
+      </h1>
+      <p class="hero-sub">
+        Cap on: 9 modes of air pulse suction. Cap off: rhythmic tapping.
+        One rose. Two completely different experiences. One easy decision.
+      </p>
+      <div class="price-row">
+        <span class="price-now">$44.99</span>
+        <span class="price-was">$104.99</span>
+        <span class="price-badge">57% OFF</span>
+      </div>
+      <div class="cta-group">
+        <a href="#offer" class="btn btn-primary btn-lg btn-block">Claim My Blossom Duo →</a>
+        <p class="promo-note">Use code <code>ROSE15</code> for an extra 15% off — expires tonight</p>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="stars">★★★★★</span>&nbsp;4.8/5 (247 reviews)
+        </div>
+        <div class="trust-item"><span class="ico">📦</span> Free shipping</div>
+        <div class="trust-item"><span class="ico">🚚</span> Ships by Mon, Jun 8</div>
+        <div class="trust-item"><span class="ico">↩</span> 30-day guarantee</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STOCK URGENCY BAR -->
+<div class="stock-bar">
+  ⚡ <strong>Only 35 units left</strong> in Batch #1 — next production run is 6–8 weeks away
+</div>
+
+<!-- ═══════════════════════════════════
+     PROBLEM
+════════════════════════════════════ -->
+<section id="problem">
+  <div class="container-sm" style="text-align:center">
+    <span class="eyebrow" style="text-align:center">The Problem With Most Rose Toys</span>
+    <h2>Most Roses Are Beautiful.<br>But They Only Do One Thing.</h2>
+    <div class="rule"></div>
+    <p>You've seen them everywhere. The rose-shaped toys that took over social media, filled your feeds, and promised something special. Maybe you even tried one.</p>
+    <p>They look beautiful. They feel curious at first. And then — that's it. One sensation. One mode. One experience, and that's all you get from a product you spent $60 to $120 on.</p>
+    <p>Blossom Duo was designed to change that.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     MECHANISM
+════════════════════════════════════ -->
+<section id="mechanism">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">How It Works</span>
+      <h2>Two Pieces. Two Completely<br>Different Experiences.</h2>
+      <p class="section-sub">The difference is the cap. And once you know it exists, you'll wonder why it took this long.</p>
+    </div>
+
+    <div class="mech-grid">
+
+      <!-- CAP ON -->
+      <div class="mech-card">
+        <div class="mech-img">
+          <span class="mode-badge">CAP ON</span>
+          <!--
+            📸 SWAP FOR: close-up product photo, fully assembled
+            Background: warm blush · Mode badge stays as HTML overlay
+          -->
+          <span class="mech-icon">💨</span>
+          <div class="img-label" style="font-size:10px">
+            📸 Cap-on product close-up<br>Assembled · Blush background
+          </div>
+        </div>
+        <div class="mech-body">
+          <div class="mech-label">Mode 1 — Air Pulse Suction</div>
+          <h3>9 Pressure Modes.</h3>
+          <p>Gentle to intense air pulse — no direct contact required. The sensation reaches without touching. Nine intensity settings, from a soft whisper to a deep, focused pulse. Start wherever feels right.</p>
+        </div>
+      </div>
+
+      <!-- CAP OFF -->
+      <div class="mech-card">
+        <div class="mech-img mode-b">
+          <span class="mode-badge">CAP OFF</span>
+          <!--
+            📸 SWAP FOR: product photo, cap detached and set aside
+            Background: cool lavender/cream · Mode badge stays as HTML overlay
+          -->
+          <span class="mech-icon">✦</span>
+          <div class="img-label" style="font-size:10px;color:#7870A8">
+            📸 Cap-off product close-up<br>Cap separated · Lavender background
+          </div>
+        </div>
+        <div class="mech-body">
+          <div class="mech-label b">Mode 2 — Rhythmic Tapping</div>
+          <h3>Something Completely Different.</h3>
+          <p>Remove the cap and the experience changes entirely. Rhythmic, pinpoint sensation — nothing like the suction mode. It's not an add-on. It's a second product hiding inside the first.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mech-footer">"The cap isn't just an accessory. It's a second experience."</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SPECS STRIP
+════════════════════════════════════ -->
+<section id="specs">
+  <div class="container">
+    <h2>Built for the Details That Actually Matter</h2>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-ico">🌊</div>
+        <h4>IPX7 Waterproof</h4>
+        <p>Shower, bath, or wherever you choose.</p>
+      </div>
+      <div class="spec-item">
+        <div class="spec-ico">🔇</div>
+        <h4>Under 55dB</h4>
+        <p>Quieter than a normal conversation.</p>
+      </div>
+      <div class="spec-item">
+        <div class="spec-ico">⏱</div>
+        <h4>Up to 65 Minutes</h4>
+        <p>One charge. One long session.</p>
+      </div>
+      <div class="spec-item">
+        <div class="spec-ico">🧴</div>
+        <h4>Body-Safe Silicone</h4>
+        <p>Medical-grade. Phthalate-free. Hypoallergenic.</p>
+      </div>
+      <div class="spec-item">
+        <div class="spec-ico">🔌</div>
+        <h4>Magnetic USB Charging</h4>
+        <p>No fumbling. Just snap and charge.</p>
+      </div>
+      <div class="spec-item">
+        <div class="spec-ico">📦</div>
+        <h4>Discreet Shipping</h4>
+        <p>Plain box. Generic label. Nothing more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     EARLY SOCIAL PROOF
+════════════════════════════════════ -->
+<section id="early-proof">
+  <div class="feat-review">
+    <div class="feat-stars">★★★★★</div>
+    <blockquote>
+      "The suction alone is incredible, but removing the cap is completely different.
+      Like having two toys in one — I genuinely didn't expect that."
+    </blockquote>
+    <div class="feat-attrib">Jessica K. · Verified Buyer · January 2026</div>
+  </div>
+  <div class="review-count">
+    <span class="stars">★★★★★</span>&nbsp;
+    4.8 out of 5 across <strong>247 verified reviews</strong> &nbsp;·&nbsp;
+    <a href="#reviews">Read all reviews ↓</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     EDITORIAL
+════════════════════════════════════ -->
+<section id="editorial">
+  <div class="container">
+    <div class="edit-grid">
+
+      <!-- IMAGE -->
+      <div class="edit-img">
+        <!--
+          📸 SWAP FOR: lifestyle editorial image
+          · Product on marble, linen, or wood surface
+          · Natural or warm studio light
+          · Candle or soft prop in scene is fine
+          · Warm rose / cream tones
+          · Feels like a premium skincare editorial, not a product shot
+        -->
+        <span style="font-size:48px">🌸</span>
+        <div class="img-label" style="font-size:10px;text-align:center">
+          📸 LIFESTYLE IMAGE<br>
+          Product on marble / linen · Warm editorial light<br>
+          Candle prop OK · Rose-cream tones
+        </div>
+      </div>
+
+      <!-- COPY -->
+      <div class="edit-content">
+        <span class="eyebrow">The Discovery Moment</span>
+        <div class="pull-quote">
+          "I thought it was<br>just <em>cute.</em>"
+        </div>
+        <p>That's what most people expect the first time they see it. A pretty rose shape. A nice gift idea. Something that looks more special than it performs.</p>
+        <p>Then they take the cap off.</p>
+        <p>Blossom Duo wasn't designed to look impressive on a shelf. It was designed to surprise you the moment you use it — and then surprise you again when you find the second experience hiding underneath the cap.</p>
+        <p>That's the detail most rose products never thought to include.</p>
+        <a href="#offer" class="btn btn-primary" style="margin-top:12px">See What's Underneath →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     COMPARISON TABLE
+════════════════════════════════════ -->
+<section id="comparison">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why Blossom Duo</span>
+      <h2>Not Just Another Rose</h2>
+      <p class="section-sub">Here's what separates Blossom Duo from the rest of the category.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th style="text-align:left;width:44%">Feature</th>
+            <th>Basic Rose Toy</th>
+            <th class="hi">Blossom Duo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Rose-Shaped Design</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Air Pulse Suction</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Rhythmic Tapping Mode</td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Detachable Cap (Two Experiences)</td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>9 Suction Intensity Modes</td><td><span class="cs">Sometimes</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>IPX7 Waterproof</td><td><span class="cs">Sometimes</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Medical-Grade Silicone</td><td><span class="cs">Sometimes</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Under 55dB Quiet</td><td><span class="cx">Rarely</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>Discreet Plain Box Shipping</td><td><span class="cs">Sometimes</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>30-Day Money-Back Guarantee</td><td><span class="cx">Rarely</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>1-Year Warranty</td><td><span class="cx">Rarely</span></td><td><span class="ck">✓</span></td></tr>
+          <tr>
+            <td style="font-weight:700">Price</td>
+            <td style="color:var(--mid)">$60–$120</td>
+            <td style="font-weight:700;color:var(--cta)">$44.99</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="comp-foot">"Most rose toys were designed to look beautiful. Blossom Duo was designed to be used."</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     MAIN REVIEWS
+════════════════════════════════════ -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Verified Reviews</span>
+      <h2>Real People. Real Reactions.</h2>
+      <div class="agg-row">
+        <span class="agg-stars">★★★★★</span>
+        <span class="agg-score">4.8</span>
+        <span class="agg-ct">/ 5 · 247 verified reviews</span>
+      </div>
+    </div>
+    <div class="review-grid">
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">The Cap Surprised Me</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"Honestly I bought it because it was pretty. I had no idea it would actually be this good. The cap surprised me — it's a completely different feeling. I didn't expect that at all."</blockquote>
+        <div class="r-author">Sarah M. <span>✓ Verified Buyer</span> · Apr 2026</div>
+      </div>
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">Two in One</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"The combination is next-level. The suction alone is incredible, but removing the cap is completely different. Like having two toys in one. I've recommended it to everyone I know."</blockquote>
+        <div class="r-author">Jessica K. <span>✓ Verified Buyer</span> · Jan 2026</div>
+      </div>
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">Perfect Gift</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"Got this for my partner after seeing it everywhere online. She was sceptical at first. Now she tells me it's the best gift I've ever given her. The packaging is also really beautiful — felt premium."</blockquote>
+        <div class="r-author">Daniel G. <span>✓ Verified Buyer</span> · Feb 2026</div>
+      </div>
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">Worth Every Dollar</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"Better than I expected, and I had high expectations. The quality feels genuinely premium — nothing like the cheap rose toys I'd tried before. The two modes make it feel like two separate products."</blockquote>
+        <div class="r-author">Maria T. <span>✓ Verified Buyer</span> · Mar 2026</div>
+      </div>
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">I Bought Another One</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"Already ordered a second one as a gift. I didn't think I'd be that person but here we are. The tapping mode is what got me — I didn't know it existed until I tried it. Game changer."</blockquote>
+        <div class="r-author">Lauren B. <span>✓ Verified Buyer</span> · May 2026</div>
+      </div>
+
+      <div class="r-card">
+        <div class="r-head">
+          <span class="r-chip">Best Purchase</span>
+          <span class="r-stars">★★★★★</span>
+        </div>
+        <blockquote>"I was hesitant about the price but this has been the best purchase I've made in a long time. Discreet shipping was a bonus — plain box, no idea what was inside. Exactly what I needed."</blockquote>
+        <div class="r-author">Priya S. <span>✓ Verified Buyer</span> · Mar 2026</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     OFFER
+════════════════════════════════════ -->
+<section id="offer">
+  <div class="container">
+    <div class="urgency-bar">
+      ⚡ Only 35 units remaining in Batch #1 — next production run takes 6–8 weeks
+    </div>
+    <div class="offer-card">
+      <div class="offer-grid">
+
+        <!-- PRODUCT IMAGE -->
+        <div class="offer-img">
+          <!--
+            📸 SWAP FOR: premium product hero shot
+            · Both pieces, clean studio presentation
+            · Premium gift box visible if possible
+            · Warm blush background
+          -->
+          <span style="font-size:56px">🌸</span>
+          <div class="img-label" style="font-size:10px">
+            📸 OFFER PRODUCT SHOT<br>
+            Both pieces · Gift box visible · Blush bg
+          </div>
+        </div>
+
+        <!-- OFFER CONTENT -->
+        <div class="offer-body">
+          <div>
+            <span class="eyebrow" style="margin-bottom:6px">Nancy Finds · Rose Collection</span>
+            <div class="offer-name">Blossom Duo</div>
+            <div class="offer-sub-name">Two experiences. One rose.</div>
+          </div>
+          <div class="offer-price-row">
+            <span class="o-price">$44.99</span>
+            <span class="o-was">$104.99</span>
+            <span class="o-save">You save $60</span>
+          </div>
+          <div class="promo-box">
+            Extra 15% off with code <code>ROSE15</code>
+            <small>Expires end of today · Applied at checkout</small>
+          </div>
+          <a href="https://nancyfinds.com/products/nancy-blossom-duo" class="btn btn-primary btn-lg btn-block">
+            Claim My Blossom Duo →
+          </a>
+          <div class="offer-trust">
+            <div class="ot-item">📦 Free Shipping</div>
+            <div class="ot-item">↩ 30-Day Returns</div>
+            <div class="ot-item">🛡 1-Year Warranty</div>
+            <div class="ot-item">🔒 Secure Checkout</div>
+          </div>
+          <p class="ship-note">Plain box · Generic label · Ships within 1 business day · Arrives Mon, Jun 8</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FAQ
+════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Questions</span>
+      <h2>A Few Things People Usually Ask</h2>
+      <p class="section-sub" style="margin-top:12px">Everything you need to know before you decide.</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q">How exactly does the cap work?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The tapping cap attaches magnetically to the top of the device. Cap on gives you air pulse suction — 9 intensity settings from gentle to intense. Remove the cap and the sensation mode changes entirely to rhythmic tapping. Two completely different experiences. One product.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Is it really waterproof?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — IPX7 rated, meaning it's safe for full submersion up to 1 metre for 30 minutes. Shower, bath, wherever. Rinse clean and it's ready to go.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How quiet is it, really?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Under 55 decibels. For context, a quiet library is around 40dB and a normal conversation is about 60dB. Blossom Duo sits comfortably below conversation level — and well below most people's notice.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What's it made of?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Medical-grade body-safe silicone over an ABS core. Phthalate-free, latex-free, and hypoallergenic. Designed to be safe for the body — not just compliant on paper.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What does the packaging look like?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Plain brown box. Generic return address. The shipping label shows only "Goods" — nothing else. Ships within 1 business day and arrives in 3–5 days (US).</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How long does the battery last?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Up to 65 minutes on a full charge. Fully recharges in under 80 minutes via the magnetic USB cable — no fumbling with ports.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What if I don't love it?<span class="faq-ico">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">30-day money-back guarantee on unopened items. 1-year manufacturer warranty against defects. We stand behind every unit we ship — if something's wrong, we'll make it right.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FINAL CTA
+════════════════════════════════════ -->
+<section id="final-cta">
+  <div class="container-sm">
+    <span class="eyebrow">One Easy Decision</span>
+    <h2>One Rose.<br>Two Experiences.</h2>
+    <p>Blossom Duo ships by Monday. Once this batch is gone, the next production run is 6–8 weeks away. 35 units remain.</p>
+    <a href="#offer" class="btn btn-primary btn-lg">Get Blossom Duo — $44.99 →</a>
+    <div class="final-trust">
+      <span class="ft-item">★★★★★ 4.8/5</span>
+      <span class="ft-item">📦 Free Shipping</span>
+      <span class="ft-item">↩ 30-Day Guarantee</span>
+      <span class="ft-item">🛡 1-Year Warranty</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Nancy <span>Finds</span></div>
+    <div class="foot-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Shipping &amp; Returns</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="foot-copy">© 2026 Care &amp; Bloom Limited · Nancy Finds · All rights reserved</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     STICKY MOBILE CTA
+════════════════════════════════════ -->
+<div id="sticky-cta">
+  <div class="sticky-inner">
+    <div class="sticky-price">$44.99 <small>$104.99</small></div>
+    <a href="#offer" class="btn btn-primary">Claim My Blossom Duo →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════ -->
+<script>
+// ── FAQ Accordion ──
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = '0';
+    });
+    // open this one if it was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+// init first FAQ open
+const firstA = document.querySelector('.faq-item.open .faq-a');
+if (firstA) firstA.style.maxHeight = firstA.scrollHeight + 'px';
+
+// ── Sticky CTA: show after hero, hide on offer section ──
+const sticky = document.getElementById('sticky-cta');
+const hero   = document.getElementById('hero');
+const offer  = document.getElementById('offer');
+
+function handleScroll() {
+  const heroGone   = hero.getBoundingClientRect().bottom < 0;
+  const offerGone  = offer.getBoundingClientRect().bottom < 80;
+  sticky.style.display = (heroGone && !offerGone) ? 'flex' : 'none';
+}
+window.addEventListener('scroll', handleScroll, {passive: true});
+
+// ── Smooth scroll for anchor links ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script>
+
+</body>
+</html>
